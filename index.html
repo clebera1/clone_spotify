@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style..css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--IRRELEVANTE-->
     <title>Clone Spotify</title>
 </head>
 <body>
@@ -13,7 +14,10 @@
              <img id="logo" src="./imgs/Spotify_Logo_RGB_White.png" alt="">
             
              <nav>
-                <ul>
+                <div class="menu_btn"> <!-- IRRELEVANTE -->
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <ul class="links">
                      <li><b>Premium</b></li>
                      <li><b>Suporte</b></li>
                      <li><b>Baixar</b></li>
@@ -24,14 +28,16 @@
              </nav>
     </header>
     <div id="anuncio">
-        <h1> <b>Aproveite 1 mês grátis Premium </b></h1>
+        <h1> <b>Aproveite 1 mês grátis de Premium </b></h1>
         <h3>Depois, pague somente R$ 19,90/mês. Cancele quando quiser.</h3>
+        <div id="buttons">
         <button id="btn1">
             <span> <b> COMEÇAR </b> </span>
         </button>
         <button id="btn2">
             <span> <b> VER PLANOS </b> </span>
         </button>
+        </div>
 
         <p class="warning"> <a href="https://www.spotify.com/br/legal/premium-promotional-offer-terms/">Sujeito a termos e condições.</a> O mês grátis não está disponível para usuários que já experimentaram o Premium.</p>
     </div>    
@@ -43,7 +49,7 @@
         <section>
             <div class="img">
                 <button class="imgs"></button>
-                <div class="txt"><h4> Modo offline.</h4>
+                <div class="txt"><h4>Modo offline.</h4>
                 <p>Ouça musica onde estiver.</p>
                 </div>
             </div>
