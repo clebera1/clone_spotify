@@ -20,6 +20,7 @@ body{
 
 }
 
+
 header{
     
     background-color: black;
@@ -30,6 +31,21 @@ header{
     height: 15%;
 }
 
+.mobile-menu div{
+    width: 20px;
+    background: white;
+    height: 3px;
+    margin: 3.5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.mobile-menu{
+    cursor:pointer;
+    display: none;
+}
+
+
 ul{
     color: white;
     list-style: none;
@@ -39,23 +55,18 @@ ul{
 
 ul li{
     display: flex;
-    padding-bottom: 30px;
     font-size: small;
     margin-right: 30px;
     cursor:pointer;
 }
 
-nav.menu_btn{
-    display: block;
-    color: white;
-    cursor: pointer;
-}
+
+
 
 ul li:hover{
     color: #169b45;
     
 }
-
 
 #anuncio{
     color: white;
@@ -203,7 +214,10 @@ footer{
     color: #169b45;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 999px){
+
+
+
 
     body{
         overflow-x: hidden;
@@ -218,13 +232,12 @@ footer{
         margin-left: 2px;
     }
 
-    nav{
-        display: none;
+
+
+    .links {
+        position: absolute;
     }
 
-    nav.menu_btn i{
-        display: block;
-    }
 
     header{
         height: 45px;
@@ -320,6 +333,66 @@ footer{
         margin-left: -300px;
         padding: 20px;
     }
+
+    .mobile-menu{
+        display: block;
+        margin-left: 60%;
+    }
+
+    .mobile-menu.active .line1{
+        transform: rotate(-50deg) translate(-5px, 3px);
+        border-radius: 0%;
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+
+    }
+    .mobile-menu.active .line3{
+        transform: rotate(50deg) translate(-5px, -4px);
+        border-radius: 0%;
+    }
+
+    nav ul{
+        position: fixed;
+        top: 20px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 50vh;
+        display: block;
+        transition: all 0.4s ease-out;
+    }
+    nav ul.open{
+        left: 0;
+    }
+
+    nav ul li{
+        width: 100%;
+        margin: 50px 0;
+        right: 0;
+        font-size: 30px;
+        margin-top: 30px;
+        letter-spacing: 2px;
+    }
+
+    .signin-up{
+        font-size: 18px;
+    }
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+
 
 
 

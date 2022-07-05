@@ -12,18 +12,20 @@
     <main>
     <header>
              <img id="logo" src="./imgs/Spotify_Logo_RGB_White.png" alt="">
-            
+            <div class="mobile-menu" onclick="menuShow()">
+             <div class="line1"></div>
+             <div class="line2"></div>
+             <div class="line3"></div>
+            </div>
+
              <nav>
-                <div class="menu_btn"> <!-- IRRELEVANTE -->
-                    <i class="fa fa-bars fa-2x"></i>
-                </div>
                 <ul class="links">
                      <li><b>Premium</b></li>
                      <li><b>Suporte</b></li>
                      <li><b>Baixar</b></li>
                      <li>|</li>
-                     <li><b>Inscrever-se</b></li>
-                     <li><b>Entrar</b></li>
+                     <li class="signin-up"><b>Inscrever-se</b></li>
+                     <li class="signin-up"><b>Entrar</b></li>
                 </ul>
              </nav>
     </header>
@@ -101,6 +103,6 @@
 
             </nav>
         </footer>
-   
+<script src="/navbar.js"></script>
 </body>
 </html>
